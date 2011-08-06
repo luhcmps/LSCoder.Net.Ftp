@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD658888-7D4B-449A-964F-D5CC6569E6A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LSCoder.Net.Ftp</RootNamespace>
+    <AssemblyName>LSCoder.Net.Ftp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\DirectoryEntry.cs" />
+    <Compile Include="Exceptions\FtpException.cs" />
+    <Compile Include="Extension\SocketExtension.cs" />
+    <Compile Include="FtpClient.cs" />
+    <Compile Include="Helper\FtpHelper.cs" />
+    <Compile Include="Helper\TraceHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protocol\Request\ChangeDirectoryRequest.cs" />
+    <Compile Include="Protocol\Request\ConnectRequest.cs" />
+    <Compile Include="Protocol\Request\ChangeToParentDirectoryRequest.cs" />
+    <Compile Include="Protocol\Request\ListRequest.cs" />
+    <Compile Include="Protocol\Request\TypeRequest.cs" />
+    <Compile Include="Protocol\Request\FtpRequest.cs" />
+    <Compile Include="Protocol\Request\IFtpRequest.cs" />
+    <Compile Include="Protocol\Request\PassiveRequest.cs" />
+    <Compile Include="Protocol\Request\RemoveDirectoryRequest.cs" />
+    <Compile Include="Protocol\Request\CreateDirectoryRequest.cs" />
+    <Compile Include="Protocol\Request\GetFileSizeRequest.cs" />
+    <Compile Include="Protocol\Request\GetDirectoryRequest.cs" />
+    <Compile Include="Protocol\Request\PasswordRequest.cs" />
+    <Compile Include="Protocol\Request\UserRequest.cs" />
+    <Compile Include="Protocol\Response\ChangeDirectoryResponse.cs" />
+    <Compile Include="Protocol\Response\ConnectResponse.cs" />
+    <Compile Include="Protocol\Response\ChangeToParentDirectoryResponse.cs" />
+    <Compile Include="Protocol\Response\ListResponse.cs" />
+    <Compile Include="Protocol\Response\TypeResponse.cs" />
+    <Compile Include="Protocol\Response\IFtpResponse.cs" />
+    <Compile Include="Protocol\Response\PassiveResponse.cs" />
+    <Compile Include="Protocol\Response\RemoveDirectoryResponse.cs" />
+    <Compile Include="Protocol\Response\CreateDirectoryResponse.cs" />
+    <Compile Include="Protocol\Response\GetFileSizeResponse.cs" />
+    <Compile Include="Protocol\Response\GetDirectoryResponse.cs" />
+    <Compile Include="Protocol\Response\PasswordResponse.cs" />
+    <Compile Include="Protocol\Response\FtpResponse.cs" />
+    <Compile Include="Protocol\Response\UserResponse.cs" />
+    <Compile Include="TransferTypes.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
